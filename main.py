@@ -25,7 +25,7 @@ def exec_menu(choice):
         with open(msg_file_name, 'r') as msg_file:
             msg = msg_file.read().replace('\n', ' ')
         print("Zaszyfrowany tekst w postaci bajtow zapisano w pliku encrypted.txt.")
-        encrypted = encryption(key, msg)
+        encrypted = encrypt(key, msg)
         with open('encrypted.txt', 'w') as output_file:
             for byte in encrypted:
                 output_file.write("%s\n" % byte)
@@ -42,7 +42,7 @@ def exec_menu(choice):
         with open(msg_file_name, 'r') as msg_file:
             msg = [int(line.strip()) for line in msg_file]
         print("Odszyfrowany tekst zapisano w pliku decrypted.txt.")
-        encrypted = decryption(key, msg)
+        encrypted = decrypt(key, msg)
         with open('decrypted.txt', 'w') as output_file:
             for byte in encrypted:
                 output_file.write("%s" % byte)
