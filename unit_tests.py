@@ -19,14 +19,14 @@ class TestDES(unittest.TestCase):
         plaintext = "Python is an interpreted, high-level, general-purpose programming language. " \
                     "It was created by Guido van Rossum and first released in 1991."
         ciphertext = encrypt(key, plaintext)
-        self.assertTrue(decryption2(key, ciphertext) == plaintext)
+        self.assertTrue(decrypt(key, ciphertext) == plaintext)
 
     def testOnlyNumbers(self):
         key = []
         for i in range(8):
             key.append(random.randint(0, 255))
         plaintext = "1 231 3123 111"
-        ciphertext = encryption(key, plaintext)
+        ciphertext = encrypt(key, plaintext)
         print(helper.byte_to_str(ciphertext))
         self.assertTrue(decrypt(key, ciphertext) == plaintext)
 
