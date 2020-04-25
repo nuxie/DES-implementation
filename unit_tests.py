@@ -14,7 +14,7 @@ class TestDES(unittest.TestCase):
 
     def testBasicEN_RANDKEY(self):
         key = []
-        for i in range(8):
+        for _ in range(8):
             key.append(random.randint(0, 255))
         plaintext = "Python is an interpreted, high-level, general-purpose programming language. " \
                     "It was created by Guido van Rossum and first released in 1991."
@@ -23,7 +23,7 @@ class TestDES(unittest.TestCase):
 
     def testOnlyNumbers(self):
         key = []
-        for i in range(8):
+        for _ in range(8):
             key.append(random.randint(0, 255))
         plaintext = "1 231 3123 111"
         ciphertext = encrypt(key, plaintext)

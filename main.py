@@ -10,7 +10,6 @@ def main_menu():
     print("0 - Wyjscie")
     choice = input(" >>  ")
     exec_menu(choice)
-    return
 
 
 def exec_menu(choice):

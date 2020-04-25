@@ -133,7 +133,7 @@ def left_shift(key, val):
     """
     left_half = key[:28]
     right_half = key[28:]
-    for x in range(val):
+    for _ in range(val):
         left_half.append(left_half.pop(0))
         right_half.append(right_half.pop(0))
     return left_half + right_half
